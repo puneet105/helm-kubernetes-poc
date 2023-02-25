@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{.Chart.Name}} #portfolio-app
+spec:
+  selector:
+    matchLabels:
+      app: portfolio
+  replicas: {{.Values.replicaCount}} #1
+  template:
+    metadata:
+      labels:
+        app: portfolio
+    spec:
+      containers:
+        - name:  {{.Chart.Name}} #portfolio-web-app
+          image: {{.Values.image.repository}}:{{.Values.image.tag}} #portfolio:v1.0
+          imagePullPolicy: {{.Values.image.pullPolicy}} #IfNotPresent
+          ports:
+            - containerPort: 80

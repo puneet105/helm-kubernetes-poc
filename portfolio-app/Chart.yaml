@@ -1,0 +1,9 @@
+apiVersion: v2
+name: portfolio-app
+description: Helm chart for deploying my portfolio application on kubernetes.
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+maintainers:
+  - email: puneetsharma.ms@gmail.com
+    name: puneet1051996

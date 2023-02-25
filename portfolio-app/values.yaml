@@ -1,0 +1,13 @@
+
+replicaCount: 1
+
+image:
+  repository: puneet1051996/portfolio-website
+  pullPolicy: IfNotPresent
+  tag: "1.0"
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 8080
+
